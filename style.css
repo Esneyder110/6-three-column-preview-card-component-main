@@ -1,0 +1,116 @@
+:root {
+    --clr-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan:hsl(179, 100%, 13%);
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75); /* Parrafos */
+    --clr-very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons): */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: "Lexend Deca";
+    background-color: var(--clr-very-light-gray);
+    color: var(--clr-transparent-white);
+    font-weight: 400;
+
+    display: grid;
+    justify-content: center;
+
+    min-height: 100vh;
+    align-content: center;
+}
+
+h1,
+h2 {
+    font-family: "Big Shoulders Display";
+    color: var(--clr-very-light-gray);
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+}
+
+/* Container */
+.card-container {
+    display: grid;
+    margin-inline: 1.6rem;
+    margin-block: 1.6rem;
+    overflow: hidden;
+    border-radius: 3rem;
+}
+
+/* Cards */
+
+.card {
+    display: grid;
+    gap: 3rem;
+    padding: 4.8rem 2.8rem;
+    max-width: 40rem;
+
+}
+
+/* Backgrounds */
+
+.card-sedans {
+    background-color: var(--clr-orange);
+}
+.card-suvs {
+    background-color: var(--clr-dark-cyan);
+}
+.card-luxury {
+    background-color: var(--clr-very-dark-cyan);
+}
+
+
+.card__title {
+    font-size: 4rem;
+}
+
+.card__description {
+    line-height: 1.73333em;
+}
+
+.card__btn {
+    padding: 1.2rem 3.4rem;
+    max-width: 14.7rem;
+    border-radius: 3rem;
+    background-color: var(--clr-very-light-gray);
+    border: 1px solid var(--clr-very-light-gray);;
+}
+
+.card > .card__btn:hover  {
+    background-color: transparent;
+    color: var(--clr-very-light-gray);
+}
+
+.card-sedans > .card__btn {
+    color: var(--clr-orange);
+}
+.card-suvs > .card__btn {
+    color: var(--clr-dark-cyan);
+}
+.card-luxury > .card__btn {
+    color: var(--clr-very-dark-cyan);
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .card-container {
+      grid-auto-flow: column;
+    }
+}
